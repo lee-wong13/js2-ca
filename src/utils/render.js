@@ -1,6 +1,6 @@
 // Utility functions for rendering posts and related elements
 
-import { deletePost } from "../api/post.js";
+import { deletePost } from "../api/posts.js";
 import { loadProfile } from "./storages.js";
 
 // Renders a single post card element with actions and metadata
