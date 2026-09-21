@@ -665,6 +665,10 @@ body > h2 {
   resize: vertical;
 }
 
+.post-container .post-card {
+  margin: 1rem 0;
+}
+
 .post-container .back-link:hover {
   text-decoration: underline;
 }
