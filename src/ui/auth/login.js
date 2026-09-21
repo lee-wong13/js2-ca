@@ -58,6 +58,7 @@ form.addEventListener("submit", async (event) => {
       }
     }
 
+    // Redirect to the feed page after successful login
     alert("Login successful!");
     window.location.assign("../feed/index.html");
   } catch (error) {
