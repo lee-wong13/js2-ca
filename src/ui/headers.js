@@ -46,7 +46,7 @@ export function renderHeader() {
   menu.className = "site-header__menu";
 
   const profileLink = document.createElement("a");
-  profileLink.href = "/pages/pages/profile/index.html";
+  profileLink.href = "/pages/profile/index.html";
   profileLink.textContent = "View profile";
 
   // Logout button for ending the user session
