@@ -35,6 +35,7 @@ form.addEventListener("submit", async (event) => {
   const formData = new FormData(form);
   const email = formData.get("email");
   const password = formData.get("password");
+  // const apiKeyInput = formData.get("apiKey").trim();
 
   const credentials = {
     email,
@@ -54,7 +55,10 @@ form.addEventListener("submit", async (event) => {
         const apiKeyResponse = await createApiKey();
         saveApiKey(apiKeyResponse.data.key);
       } catch (apiKeyError) {
-        console.warn("Unable to create an API key after login.", apiKeyError);
+        showError(
+          "Login succeeded, but no Noroff API key is available. Enter your API key and try again.",
+        );
+        return;
       }
     }
 

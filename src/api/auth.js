@@ -1,7 +1,7 @@
 // API functions for authentication
 
 import { API_AUTH } from "./constants.js";
-import { loadToken } from "../utils/storages.js";
+import { loadToken, saveToken } from "../utils/storages.js";
 
 //error handling for authentication API requests
 export function handleAuthError(response) {
