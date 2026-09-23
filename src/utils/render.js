@@ -63,7 +63,7 @@ export function renderPostCard(post) {
 
   if (isOwnPost) {
     const editLink = document.createElement("a");
-    editLink.href = `../post/index.html?id=${post.id}&edit=true`;
+    editLink.href = `/post/index.html?id=${post.id}&edit=true`;
     editLink.textContent = "Edit post";
 
     deleteButton = document.createElement("button");
@@ -72,7 +72,7 @@ export function renderPostCard(post) {
     menuContent.append(editLink, deleteButton);
   } else {
     const profileLink = document.createElement("a");
-    profileLink.href = `../profile/index.html?name=${encodeURIComponent(
+    profileLink.href = `/profile/index.html?name=${encodeURIComponent(
       authorName,
     )}`;
     profileLink.textContent = "View profile";
@@ -118,7 +118,7 @@ export function renderPostCard(post) {
   title.className = "post-title";
 
   const titleLink = document.createElement("a");
-  titleLink.href = `../post/index.html?id=${post.id}`;
+  titleLink.href = `/post/index.html?id=${post.id}`;
   titleLink.textContent = post.title;
   title.append(titleLink);
 
@@ -130,7 +130,7 @@ export function renderPostCard(post) {
 
   const authorLink = document.createElement("a");
   authorLink.className = "author-link";
-  authorLink.href = `../profile/index.html?name=${encodeURIComponent(
+  authorLink.href = `/profile/index.html?name=${encodeURIComponent(
     authorName,
   )}`;
 
