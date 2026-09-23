@@ -3,15 +3,22 @@
 import { deletePost } from "../api/posts.js";
 import { loadProfile } from "./storages.js";
 
+function getPagesBase() {
+  return window.location.pathname.includes("/pages/")
+    ? `${window.location.pathname.split("/pages/")[0]}/pages/`
+    : "pages/";
+}
+
 // Renders a single post card element with actions and metadata
 export function renderPostCard(post) {
+  const pagesBase = getPagesBase();
   const article = document.createElement("article");
   article.className = "post-card";
   article.tabIndex = 0;
   article.setAttribute("aria-label", `Open post: ${post.title}`);
 
   const openPost = () => {
-    window.location.assign(`../post/index.html?id=${post.id}`);
+    window.location.assign(`${pagesBase}post/index.html?id=${post.id}`);
   };
 
   article.addEventListener("click", (event) => {
@@ -63,7 +70,7 @@ export function renderPostCard(post) {
 
   if (isOwnPost) {
     const editLink = document.createElement("a");
-    editLink.href = `/post/index.html?id=${post.id}&edit=true`;
+    editLink.href = `${pagesBase}post/index.html?id=${post.id}&edit=true`;
     editLink.textContent = "Edit post";
 
     deleteButton = document.createElement("button");
@@ -72,7 +79,7 @@ export function renderPostCard(post) {
     menuContent.append(editLink, deleteButton);
   } else {
     const profileLink = document.createElement("a");
-    profileLink.href = `/profile/index.html?name=${encodeURIComponent(
+    profileLink.href = `${pagesBase}profile/index.html?name=${encodeURIComponent(
       authorName,
     )}`;
     profileLink.textContent = "View profile";
@@ -118,7 +125,7 @@ export function renderPostCard(post) {
   title.className = "post-title";
 
   const titleLink = document.createElement("a");
-  titleLink.href = `/post/index.html?id=${post.id}`;
+  titleLink.href = `${pagesBase}post/index.html?id=${post.id}`;
   titleLink.textContent = post.title;
   title.append(titleLink);
 
@@ -130,7 +137,7 @@ export function renderPostCard(post) {
 
   const authorLink = document.createElement("a");
   authorLink.className = "author-link";
-  authorLink.href = `/profile/index.html?name=${encodeURIComponent(
+  authorLink.href = `${pagesBase}profile/index.html?name=${encodeURIComponent(
     authorName,
   )}`;
 
