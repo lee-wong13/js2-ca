@@ -11,7 +11,9 @@ export function renderPostCard(post) {
   article.setAttribute("aria-label", `Open post: ${post.title}`);
 
   const openPost = () => {
-    window.location.assign(`/pages/post/index.html?id=${post.id}`);
+    window.location.assign(
+      `${import.meta.env.BASE_URL}pages/post/index.html?id=${post.id}`,
+    );
   };
 
   article.addEventListener("click", (event) => {

@@ -29,4 +29,5 @@ export function loadProfile() {
 export function clearSession() {
   localStorage.removeItem(TOKEN_KEY);
   localStorage.removeItem(PROFILE_KEY);
+  localStorage.removeItem(API_KEY_STORAGE_KEY);
 }

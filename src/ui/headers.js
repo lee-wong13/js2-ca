@@ -8,7 +8,7 @@ export function renderHeader() {
 
   const homeLink = document.createElement("a");
   homeLink.className = "site-header__brand";
-  homeLink.href = "/pages/feed/index.html";
+  homeLink.href = `${import.meta.env.BASE_URL}pages/feed/index.html`;
   homeLink.textContent = "COMMONS";
 
   const userMenu = document.createElement("div");
@@ -46,7 +46,7 @@ export function renderHeader() {
   menu.className = "site-header__menu";
 
   const profileLink = document.createElement("a");
-  profileLink.href = "/pages/profile/index.html";
+  profileLink.href = `${import.meta.env.BASE_URL}pages/profile/index.html`;
   profileLink.textContent = "View profile";
 
   // Logout button for ending the user session
@@ -55,7 +55,7 @@ export function renderHeader() {
   logoutButton.textContent = "Logout";
   logoutButton.addEventListener("click", () => {
     clearSession();
-    window.location.assign("/pages/auth/login.html");
+    window.location.assign(`${import.meta.env.BASE_URL}pages/auth/login.html`);
   });
 
   menu.append(profileLink, logoutButton);
