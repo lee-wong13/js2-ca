@@ -11,9 +11,7 @@ export function renderPostCard(post) {
   article.setAttribute("aria-label", `Open post: ${post.title}`);
 
   const openPost = () => {
-    window.location.assign(
-      `${import.meta.env.BASE_URL}pages/post/index.html?id=${post.id}`,
-    );
+    window.location.assign(`../post/index.html?id=${post.id}`);
   };
 
   article.addEventListener("click", (event) => {
@@ -65,7 +63,7 @@ export function renderPostCard(post) {
 
   if (isOwnPost) {
     const editLink = document.createElement("a");
-    editLink.href = `/pages/post/index.html?id=${post.id}&edit=true`;
+    editLink.href = `../post/index.html?id=${post.id}&edit=true`;
     editLink.textContent = "Edit post";
 
     deleteButton = document.createElement("button");
@@ -120,7 +118,7 @@ export function renderPostCard(post) {
   title.className = "post-title";
 
   const titleLink = document.createElement("a");
-  titleLink.href = `/pages/post/index.html?id=${post.id}`;
+  titleLink.href = `../post/index.html?id=${post.id}`;
   titleLink.textContent = post.title;
   title.append(titleLink);
 

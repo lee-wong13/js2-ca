@@ -2,13 +2,16 @@ import { getProfile } from "../api/profile.js";
 import { clearSession, loadProfile } from "../utils/storages.js";
 
 export function renderHeader() {
+  const pagesBase = window.location.pathname.includes("/pages/")
+    ? `${window.location.pathname.split("/pages/")[0]}/pages/`
+    : "pages/";
   const profile = loadProfile();
   const header = document.createElement("header");
   header.className = "site-header";
 
   const homeLink = document.createElement("a");
   homeLink.className = "site-header__brand";
-  homeLink.href = `${import.meta.env.BASE_URL}pages/feed/index.html`;
+  homeLink.href = `${pagesBase}feed/index.html`;
   homeLink.textContent = "COMMONS";
 
   const userMenu = document.createElement("div");
@@ -46,7 +49,7 @@ export function renderHeader() {
   menu.className = "site-header__menu";
 
   const profileLink = document.createElement("a");
-  profileLink.href = `${import.meta.env.BASE_URL}pages/profile/index.html`;
+  profileLink.href = `${pagesBase}profile/index.html`;
   profileLink.textContent = "View profile";
 
   // Logout button for ending the user session
@@ -55,7 +58,7 @@ export function renderHeader() {
   logoutButton.textContent = "Logout";
   logoutButton.addEventListener("click", () => {
     clearSession();
-    window.location.assign(`${import.meta.env.BASE_URL}pages/auth/login.html`);
+    window.location.assign(`${pagesBase}auth/login.html`);
   });
 
   menu.append(profileLink, logoutButton);
