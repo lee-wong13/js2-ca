@@ -15,5 +15,12 @@
     "eslint": "^10.13.0",
     "prettier": "^3.9.10",
     "tailwindcss": "^4.3.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": "prettier --write"
   }
 }
