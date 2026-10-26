@@ -70,4 +70,5 @@ public/      Public static assets
 The project is deployed to GitHub Pages using the workflow in `.github/workflows/deploy-pages.yml`. The workflow installs dependencies, runs the Vite production build, and publishes the `dist` directory.
 
 ## Resources
-- https://www.ramotion.com/blog/how-to-install-tailwind-css/ 
+
+- https://www.ramotion.com/blog/how-to-install-tailwind-css/
