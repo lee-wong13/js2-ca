@@ -187,6 +187,36 @@ button {
   color: white;
 }
 
+/* ========= LANDING PAGE STYLES using tailwind css ========= */
+
+.landing-page {
+  @apply mx-auto min-h-screen w-full max-w-none justify-center px-6 py-16 text-center;
+}
+
+.landing-page h1 {
+  @apply mb-5 text-5xl tracking-tight text-stone-900 sm:text-6xl;
+}
+
+.landing-page > p {
+  @apply mb-8 max-w-xl text-base leading-relaxed text-stone-600 sm:text-lg;
+}
+
+.landing-page .btn-container {
+  @apply flex w-full max-w-sm flex-col gap-3 sm:flex-row;
+}
+
+.landing-page .btn {
+  @apply m-0 min-h-12 flex-1 rounded-lg px-6 py-3 font-mono text-xs tracking-widest uppercase transition-colors;
+}
+
+.landing-page #login-btn {
+  @apply border border-[var(--primary-accent-color)] bg-[var(--primary-accent-color)] text-white hover:border-[var(--secondary-accent-color)] hover:bg-[var(--secondary-accent-color)];
+}
+
+.landing-page #register-btn {
+  @apply border border-[var(--primary-accent-color)] bg-transparent text-[var(--primary-accent-color)] hover:bg-[var(--primary-accent-color)] hover:text-white;
+}
+
 /* ========= LOGIN and REGISTER FORM STYLES ========= */
 .login-container,
 .register-container,
@@ -300,6 +330,53 @@ body > h2 {
   text-decoration: none;
   font-weight: 500;
   text-underline-offset: 2px;
+}
+
+/* ========= LOGIN STYLES using tailwind css ========= */
+
+.login-container,
+.register-container {
+  @apply mx-auto my-10 w-11/12 max-w-md rounded-2xl border border-stone-200 bg-white p-8 shadow-lg;
+}
+
+.login-container h1,
+.register-container h1 {
+  @apply mb-2 text-3xl tracking-tight text-stone-900;
+}
+
+.login-form,
+.register-form {
+  @apply mt-8 gap-3;
+}
+
+.login-form label,
+.register-form label {
+  @apply mt-3 font-mono text-xs tracking-widest uppercase;
+}
+
+.login-form label:first-of-type,
+.register-form label:first-of-type {
+  @apply mt-0;
+}
+
+.login-form input,
+.register-form input {
+  @apply h-11 rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-[var(--primary-accent-color)] focus:ring-2 focus:ring-[var(--border-color)] focus:outline-none;
+}
+
+.login-form #login-btn,
+.register-form #register-btn {
+  @apply mt-3 h-11 rounded-lg bg-[var(--primary-accent-color)] font-mono text-xs tracking-widest text-white uppercase hover:bg-[var(--secondary-accent-color)];
+}
+
+.login-container p,
+.register-container p {
+  @apply mt-6 text-sm text-stone-500;
+}
+
+.login-container p a,
+.register-container p a {
+  @apply text-[var(--primary-accent-color)] underline-offset-4 hover:text-[var(--secondary-accent-color)] hover:underline;
 }
 
 .error-message {

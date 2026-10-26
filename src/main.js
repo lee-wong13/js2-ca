@@ -1,7 +1,7 @@
 import "../src/css/style.css";
 
 document.querySelector("#app").innerHTML = `
-<main class="container">
+<main class="container landing-page">
         <h1>COMMONS</h1>
         <p>
           Post updates, share ideas, follow people, see what's new, find people
