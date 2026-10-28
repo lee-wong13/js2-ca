@@ -73,3 +73,4 @@ The project is deployed to GitHub Pages using the workflow in `.github/workflows
 
 - https://www.ramotion.com/blog/how-to-install-tailwind-css/
 - https://tailwindcss.com/docs/styling-with-utility-classes
+- https://tailwindcss.com/docs/functions-and-directives

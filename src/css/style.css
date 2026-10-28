@@ -835,14 +835,6 @@ body > h2 {
   text-decoration: underline;
 }
 
-.post-container h1 {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  color: var(--heading-color);
-  margin: 1rem 0 1rem;
-  font-weight: 600;
-}
-
 .post-container p {
   font-family: var(--font-serif);
   font-size: 0.875rem;
@@ -1013,6 +1005,16 @@ body > h2 {
 .post-container .post-actions button#delete-btn:hover {
   background-color: var(--error-color);
   color: white;
+}
+
+/* =========== Post Container using tailwind css ========= */
+
+.post-container {
+  @apply mx-auto my-6 max-w-3xl rounded-2xl border border-[var(--border-color)] bg-[var(--header-background-color)] p-4 shadow-sm sm:my-8 sm:p-6;
+}
+
+.post-container #post-content > .post-card .post-title {
+  @apply mb-4 font-serif text-2xl leading-tight font-semibold text-[var(--heading-color)] sm:text-3xl;
 }
 
 /* ========= PROFILE STYLES ========= */
@@ -1491,13 +1493,14 @@ body > h2 {
 }
 
 .post-container #post-content > .post-card h3 a {
-  color: var(--primary-accent-color);
+  color: var(--heading-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .post-container #post-content > .post-card h3 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: var(--primary-accent-color);
+  text-decoration: none;
 }
 
 .post-container #post-content > .post-card .author {
