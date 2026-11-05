@@ -1599,3 +1599,93 @@ body > h2 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
+
+/* ============== Profile using Tailwind CSS ============== */
+
+.profile-page {
+  @apply mx-auto my-6 max-w-3xl overflow-hidden rounded-2xl border border-[var(--border-color)] bg-[var(--header-background-color)] p-0 shadow-sm sm:my-8;
+}
+
+.profile-banner {
+  @apply m-0 h-48 w-full overflow-hidden rounded-none bg-[var(--primary-accent-color)] sm:h-64;
+}
+
+.profile-header {
+  @apply relative z-[1] mx-4 -mt-10 flex flex-col items-center gap-4 rounded-xl border border-[var(--border-color)] bg-[var(--header-background-color)] p-5 text-center shadow-md sm:mx-6 sm:-mt-12 sm:flex-row sm:items-start sm:gap-5 sm:p-6 sm:text-left;
+}
+
+.profile-avatar {
+  @apply h-24 w-24 shrink-0 rounded-full border-4 border-[var(--header-background-color)] shadow-md;
+}
+
+.profile-info {
+  @apply w-full min-w-0 flex-1 items-center sm:w-auto sm:items-start;
+}
+
+.profile-info h1 {
+  @apply mb-3 text-2xl tracking-tight break-words sm:text-3xl;
+}
+
+.profile-stats {
+  @apply mb-4 gap-2;
+}
+
+.profile-stats button,
+.profile-stats span {
+  @apply rounded-md px-1 py-1 text-[0.7rem] tracking-wider;
+}
+
+.profile-info p#bio {
+  @apply mb-5 max-w-2xl text-base leading-relaxed tracking-normal;
+}
+
+.profile-actions {
+  @apply justify-center gap-2 sm:justify-start;
+}
+
+#follow-btn,
+#unfollow-btn,
+#edit-profile-btn {
+  @apply min-h-10 rounded-lg px-4 py-2 text-[0.7rem] tracking-widest transition-colors;
+}
+
+#follow-btn:disabled,
+#unfollow-btn:disabled {
+  @apply cursor-wait opacity-60;
+}
+
+#profile-posts {
+  @apply mx-4 mb-5 sm:mx-6 sm:mb-6;
+}
+
+.profile-posts-title {
+  @apply mb-4 border-b border-[var(--border-color)] pb-3 text-sm tracking-widest;
+}
+
+#profile-post-list {
+  @apply gap-4;
+}
+
+#profile-post-list > p {
+  @apply rounded-xl border border-[var(--border-color)] bg-white p-6 text-center text-sm text-[var(--muted-text-color)];
+}
+
+#profile-post-list .post-card {
+  @apply rounded-xl border-[var(--border-color)] bg-white p-5 shadow-sm transition-shadow hover:shadow-md sm:p-6;
+}
+
+#profile-post-list .post-card h3 {
+  @apply pr-8 text-xl leading-tight;
+}
+
+#profile-post-list .post-card h3 a {
+  @apply text-[var(--heading-color)] hover:text-[var(--primary-accent-color)];
+}
+
+#profile-post-list .post-card .image {
+  @apply overflow-hidden rounded-lg border border-[var(--border-color)];
+}
+
+#profile-post-list .post-card .date {
+  @apply mt-4 border-t border-[var(--border-color)] pt-3;
+}
