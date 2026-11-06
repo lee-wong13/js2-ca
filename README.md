@@ -13,14 +13,15 @@ https://lee-wong13.github.io/js2-ca/
 - Create, edit, and delete posts
 - Search posts
 - View individual posts
-- View user profiles and profile posts
+- View user profiles, profile posts, and post/follower/following counts
+- Edit your profile bio, avatar, and banner
+- Browse and search a user's followers and following lists
 - Follow and unfollow users
-- Responsive interface for desktop and mobile screens
 
 ## Technologies
 
 - HTML
-- CSS
+- CSS and Tailwind CSS
 - JavaScript modules
 - Vite
 - Noroff Social API
