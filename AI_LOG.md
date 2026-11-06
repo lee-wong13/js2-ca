@@ -105,3 +105,24 @@ Answer:
 - Several URLs started with /, which breaks when deployed under a project subpath, and GitHub is quite sensitive with paths.
 
 CoPilot
+
+### 2026-10-28
+
+Promt: What is wrong with .post-container h1? And why the style deosn't apply to it?
+
+Answer:
+
+- Nothing is syntactically wrong with .post-container h1, but it won’t match the post title: the post page renders that title as an <h3>, not an <h1>. So those styles won’t apply to it.
+  The relevant title selector is .post-container #post-content > .post-card h3 in style.css. If you intended the title to be an <h1>, you’d need to change the markup generated in render.js.
+
+CoPilot
+
+### 2026-10-28
+
+Promt: Why doesn't hover effect apply to the post title?
+
+Answer:
+
+- The hover effect looked ineffective because the link’s base color and hover color were both --primary-accent-color. Change the hover state to the darker --secondary-accent-color and added a color transition in style.css.
+
+CoPilot

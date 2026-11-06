@@ -13,14 +13,15 @@ https://lee-wong13.github.io/js2-ca/
 - Create, edit, and delete posts
 - Search posts
 - View individual posts
-- View user profiles and profile posts
+- View user profiles, profile posts, and post/follower/following counts
+- Edit your profile bio, avatar, and banner
+- Browse and search a user's followers and following lists
 - Follow and unfollow users
-- Responsive interface for desktop and mobile screens
 
 ## Technologies
 
 - HTML
-- CSS
+- CSS and Tailwind CSS
 - JavaScript modules
 - Vite
 - Noroff Social API
@@ -68,3 +69,9 @@ public/      Public static assets
 ## Deployment
 
 The project is deployed to GitHub Pages using the workflow in `.github/workflows/deploy-pages.yml`. The workflow installs dependencies, runs the Vite production build, and publishes the `dist` directory.
+
+## Resources for CSS-Frameworks
+
+- https://www.ramotion.com/blog/how-to-install-tailwind-css/
+- https://tailwindcss.com/docs/styling-with-utility-classes
+- https://tailwindcss.com/docs/functions-and-directives
